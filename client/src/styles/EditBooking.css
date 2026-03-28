@@ -1,0 +1,155 @@
+.edit-page { max-width: 680px; margin: 0 auto; animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+.edit-page .btn-back {
+  background: transparent;
+  color: var(--muted);
+  padding: 0.4rem 0;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.edit-page .btn-back:hover { color: var(--light); }
+
+.edit-page h2 { font-size: 1.8rem; color: var(--light); margin-bottom: 1.5rem; }
+
+.edit-form {
+  background: var(--dark);
+  border: 1px solid var(--dark3);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.edit-form .form-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-form .form-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--dark3);
+}
+
+.edit-form .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.edit-form .form-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.edit-form .form-group input {
+  padding: 0.75rem 1rem;
+  background: var(--dark2);
+  border: 1px solid var(--dark3);
+  border-radius: var(--radius-sm);
+  color: var(--light);
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: var(--transition);
+}
+
+.edit-form .form-group input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+
+.edit-form .options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 0.6rem;
+}
+
+.edit-form .option-card {
+  background: var(--dark2);
+  border: 1px solid var(--dark3);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 0.4rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: var(--transition);
+  text-transform: capitalize;
+}
+
+.edit-form .option-card:hover { border-color: var(--mid); color: var(--light); transform: translateY(-2px); }
+
+.edit-form .option-card.selected {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.12);
+  color: var(--gold-light);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px var(--gold-dim);
+  transform: translateY(-2px);
+}
+
+.edit-form .option-icon { display: block; font-size: 1.5rem; margin-bottom: 0.35rem; }
+.edit-form .option-price { display: block; font-size: 0.7rem; color: var(--gold); margin-top: 0.2rem; font-weight: 600; }
+
+.edit-price-preview {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--gold-light);
+}
+
+.edit-price-preview span:first-child { font-size: 0.8rem; font-family: 'Inter', sans-serif; color: var(--muted); font-weight: 500; }
+
+.error-msg {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger);
+  color: #ff8a8a;
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+}
+
+.edit-actions { display: flex; gap: 0.8rem; }
+
+.btn-save {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  color: var(--black);
+  flex: 2;
+  padding: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.5px;
+}
+
+.btn-save:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.3); }
+
+.btn-cancel {
+  background: var(--dark2);
+  color: var(--muted);
+  flex: 1;
+  padding: 0.85rem;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--dark3);
+}
+
+.btn-cancel:hover { background: var(--dark3); color: var(--light); }

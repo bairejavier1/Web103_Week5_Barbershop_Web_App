@@ -1,0 +1,66 @@
+.navbar {
+  background: var(--dark);
+  border-bottom: 1px solid var(--dark3);
+  padding: 0 2.5rem;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-brand .brand-icon {
+  font-size: 1.5rem;
+}
+
+.navbar-brand .brand-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+.navbar-brand .brand-sub {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  letter-spacing: 0.3px;
+}
+
+.navbar-links a:hover {
+  color: var(--light);
+  background: var(--dark2);
+}
+
+.navbar-links a.active {
+  color: var(--gold-light);
+  background: rgba(201, 168, 76, 0.1);
+}
